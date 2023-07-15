@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor:#E2F6CA;
+    --errorText: red;
+    --purple: #8052E7;
+    --textBold: black;
+    --textForInputs: gray;
+}
+/* body{
+    background-color: var(--textBold);
+} */
+
+.container {
+    width: 370px;
+    height: 650px;
+    background-color: var(--backgroundColor);
+    border-radius: 20px 20px 160px 20px;
+    margin: 50px auto;
+
+}
+
+.inputs {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input {
+    height: 70px;
+    border: 1px solid var(--textForInputs);
+    border-radius: 8px;
+    font-size: 1.8rem;
+    margin: 10px 0;
+    text-indent: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.label {
+    color: var(--textForInputs);
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.forYear,
+.forMonth,
+.forDay {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    border-bottom: 1px solid var(--textForInputs);
+    width: 90%;
+    margin: 25px 5%;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: 28vh;
+    left: 40vw;
+
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.display {
+    width: 100%;
+    height: 35%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.outputYears,
+.outputMonth,
+.outputDay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#countedYear,
+#countedMonth,
+#countedDay {
+    width: 70px;
+    height: 70px;
+    margin-right: 50px;
+    color: var(--purple);
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#errorTextForYear,
+#errorTextForMonth,
+#errorTextForDay {
+    color: red;
+    font-size: 18px;
+}
+
+@media (min-width:1024px) {
+    .container {
+        width: 800px;
+        height: 600px;
+        background-color: var(--backgroundColor);
+        margin: 15px auto;
+
+    }
+
+
+    .btn {
+        width: 100px;
+        height: 100px;
+        background-color: var(--purple);
+        top: 27vh;
+        left: 70vw;
+
+    }
+
+    .inputs {
+        width: 70%;
+    }
+
+    #countedYear,
+    #countedMonth,
+    #countedDay {
+        width: 110px;
+        height: 110px;
+        /* margin-right: 50px; */
+        font-size: 7rem;
+    }
+
+    .display {
+        width: 60%;
+        font-size: 5rem;
+        margin-top: 40px;
+
+
+
+    }
+}
