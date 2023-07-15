@@ -110,8 +110,8 @@ function inputValidation() {
     }
     else if (inputYear.value === '') {
         labelMonth.style.color = 'gray'
-        labelYear.style.color = 'red'
         errorTextForMonth.innerText = '';
+        labelYear.style.color = 'red'
         errorTextForYear.innerText = validator.year.validators.required.errorText
     } else if (inputYear.value > validator.year.validators.maxNumber.value) {
         labelYear.style.color = 'red'
@@ -122,8 +122,13 @@ function inputValidation() {
         errorTextForYear.innerText = validator.year.validators.minNumber.errorText
     }
     else {
-        errorTextForYear.innerText = '';
+        labelDay.style.color = 'gray'
+        errorTextForDay.innerText = ''
+        labelMonth.style.color = 'gray'
+        errorTextForMonth.innerText = ''
         labelYear.style.color = 'gray'
+        errorTextForYear.innerText = ''
+
         outputYear.innerText = currentYear - inputYear.value
         outputMonth.innerText = currentMonth - inputMonth.value
         outputDay.innerText = currentDay - inputDay.value
