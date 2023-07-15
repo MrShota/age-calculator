@@ -1,33 +1,33 @@
 
-const currentDate = new Date()
-const currentDay = currentDate.getDay() + 2
-const currentMonth = currentDate.getMonth() + 1
-const currentYear = currentDate.getFullYear()
+const currentDate = new Date();
+const currentDay = currentDate.getDay() + 2;
+const currentMonth = currentDate.getMonth() + 1;
+const currentYear = currentDate.getFullYear();
 
-const inputDay = document.getElementById('day')
-const inputMonth = document.getElementById('month')
-const inputYear = document.getElementById('year')
+const inputDay = document.getElementById('day');
+const inputMonth = document.getElementById('month');
+const inputYear = document.getElementById('year');
 
-const forYear = document.getElementById('forYear')
-const forMonth = document.getElementById('forMonth')
-const forDay = document.getElementById('forDay')
+const forYear = document.getElementById('forYear');
+const forMonth = document.getElementById('forMonth');
+const forDay = document.getElementById('forDay');
 
 let validator = ''
-const labelDay = document.getElementById('labelDay')
-const labelMonth = document.getElementById('labelMonth')
-const labelYear = document.getElementById('labelYear')
+const labelDay = document.getElementById('labelDay');
+const labelMonth = document.getElementById('labelMonth');
+const labelYear = document.getElementById('labelYear');
 
 
-const btn = document.getElementById('btn')
-btn.addEventListener('click', calculateAge)
+const btn = document.getElementById('btn');
+btn.addEventListener('click', calculateAge);
 
-const outputDay = document.getElementById('countedDay')
-const outputMonth = document.getElementById('countedMonth')
-const outputYear = document.getElementById('countedYear')
+const outputDay = document.getElementById('countedDay');
+const outputMonth = document.getElementById('countedMonth');
+const outputYear = document.getElementById('countedYear');
 
-let errorTextForDay = document.getElementById('errorTextForDay')
-let errorTextForMonth = document.getElementById('errorTextForMonth')
-let errorTextForYear = document.getElementById('errorTextForYear')
+let errorTextForDay = document.getElementById('errorTextForDay');
+let errorTextForMonth = document.getElementById('errorTextForMonth');
+let errorTextForYear = document.getElementById('errorTextForYear');
 
 function calculateAge() {
     validator = {
@@ -115,7 +115,6 @@ function inputValidation() {
         errorTextForYear.innerText = validator.year.validators.required.errorText
     } else if (inputYear.value > validator.year.validators.maxNumber.value) {
         labelYear.style.color = 'red'
-
         errorTextForYear.innerText = validator.year.validators.maxNumber.errorText
     } else if (inputYear.value < validator.year.validators.minNumber.value) {
         labelYear.style.color = 'red'
@@ -128,11 +127,9 @@ function inputValidation() {
         errorTextForMonth.innerText = ''
         labelYear.style.color = 'gray'
         errorTextForYear.innerText = ''
-
         outputYear.innerText = currentYear - inputYear.value
         outputMonth.innerText = currentMonth - inputMonth.value
         outputDay.innerText = currentDay - inputDay.value
-
     }
 }
 
